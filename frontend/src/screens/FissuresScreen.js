@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import axios from 'axios'
-import Fissure from './Fissure'
+import Fissure from '../components/Fissure'
 
-const Fissures = () => {
+const FissuresScreen = () => {
   const [fissures, setFissures] = useState([])
 
   useEffect(() => {
@@ -21,6 +21,9 @@ const Fissures = () => {
   return (
     <>
       <h1>Fissures</h1>
+      <p>
+        <strong>Refresh the screen to update the list</strong>
+      </p>
       <Row>
         {fissures.map((fissure) => (
           <Col
@@ -39,4 +42,4 @@ const Fissures = () => {
   )
 }
 
-export default Fissures
+export default FissuresScreen

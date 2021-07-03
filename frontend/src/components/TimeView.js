@@ -4,13 +4,15 @@ import { formatDistanceStrict } from 'date-fns'
 
 const TimeView = ({ expiry }) => {
   const currentTime = React.useContext(CurrentTimeCtx)
+  const expiryTime = new Date(expiry)
 
   return (
     <p>
-      Ends{' '}
-      {formatDistanceStrict(new Date(expiry), currentTime, {
-        addSuffix: true,
-      })}
+      {expiryTime < currentTime
+        ? 'Ended'
+        : `Ends ${formatDistanceStrict(expiryTime, currentTime, {
+            addSuffix: true,
+          })}`}
     </p>
   )
 }

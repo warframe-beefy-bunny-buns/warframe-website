@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap'
 
 const Header = () => {
   return (
-    <header>
+    <header style={{ position: 'sticky', top: 0, zIndex: 1 }}>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <Navbar.Brand href='/'>My Warframe Screen</Navbar.Brand>

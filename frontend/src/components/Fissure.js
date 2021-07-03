@@ -9,7 +9,7 @@ const Fissure = ({ fissure }) => {
   return (
     <>
       <Card
-        className='my-3 p-3 rounded'
+        className='my-3 p-3 rounded w-100'
         border={!fissure.isStorm ? 'success' : 'warning'}
       >
         <Card.Body>
